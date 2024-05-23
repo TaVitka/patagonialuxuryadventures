@@ -1,12 +1,6 @@
 @use "../utils/functions/"as*;
 @use "../utils/mixins/"as*;
 
-h1,
-h2,
-h3 {
-  overflow: hidden;
-}
-
 h1 {
   font-size: clamp(32px, 5vi, 70px);
   line-height: 0.85;
@@ -43,6 +37,11 @@ h3 {
   color: var(--color-pink-400);
 }
 
+.decor {
+  color: var(--color-blue-500);
+  line-height: 1.2;
+}
+
 a,
 button {
   display: block;
@@ -52,6 +51,7 @@ button {
 
 p {
   font-weight: var(--fw-400);
+  line-height: 1.22;
 }
 
 input,
