@@ -44,4 +44,17 @@
   &--large {
     padding: 19px clamp(26px, 3.4vw, 48px);
   }
+
+  &--mobile {
+    display: none;
+    margin-inline: auto;
+
+    @include media(tablet) {
+      display: block;
+    }
+
+    @include media(mobile-m) {
+      width: 100%;
+    }
+  }
 }
