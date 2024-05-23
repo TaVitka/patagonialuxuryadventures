@@ -50,6 +50,10 @@ button {
   overflow: hidden;
 }
 
+p {
+  font-weight: var(--fw-400);
+}
+
 input,
 textarea {
   font-weight: var(--fw-400);
