@@ -26,14 +26,22 @@
     background: var(--color-grey-700);
   }
 
-  &--reverse {
+  &--reverse,
+  &--large {
     font-size: clamp(20px, 2vi, 23px);
     line-height: 1.2;
     font-weight: var(--fw-400);
 
+  }
+
+  &--reverse {
     &:hover {
       color: var(--color-dark) !important;
       background: var(--color-white);
     }
+  }
+
+  &--large {
+    padding: 19px clamp(26px, 3.4vw, 48px);
   }
 }

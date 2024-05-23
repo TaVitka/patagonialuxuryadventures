@@ -1,0 +1,44 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.hero {
+  padding: 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: var(--header-height) 0 32px;
+    min-height: 727px;
+    background-position: 100% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+
+    h1 {
+      margin-bottom: 32px;
+    }
+
+    .desc {
+      max-width: 534px;
+      width: 100%;
+      margin-bottom: clamp(32px, 12vw, 171px);
+    }
+  }
+
+  &--home {
+    .hero__inner {
+     padding-top: calc(var(--header-height) - 10px);
+    }
+  }
+
+  @include media(mobile-l) {
+    &__inner {
+      min-height: 460px;
+    }
+  }
+}
