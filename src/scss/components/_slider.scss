@@ -138,6 +138,8 @@
   }
 
   &--discover {
+    padding-bottom: 0;
+
     .slider__slides {
       margin-bottom: clamp(30px, 5.6vw, 80px);
     }

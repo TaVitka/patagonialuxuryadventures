@@ -45,6 +45,17 @@
     padding: 19px clamp(26px, 3.4vw, 48px);
   }
 
+  &--send {
+    padding: 14px 23px;
+    font-size: 18px;
+    line-height: 1;
+    font-weight: var(--fw-500);
+    color: var(--color-white) !important;
+    text-transform: initial;
+    background-color: var(--color-black);
+    border-radius: var(--radius-m);
+  }
+
   &--mobile {
     display: none;
     margin-inline: auto;

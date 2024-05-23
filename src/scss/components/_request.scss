@@ -1,0 +1,57 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.request {
+  background-color: var(--color-dark);
+
+  h2 {
+    margin-bottom: clamp(24px, 3.8vw, 48px);
+    color: var(--color-white);
+    text-align: center;
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 800px;
+    width: 100%;
+    margin-inline: auto;
+    padding: clamp(20px, 2.8vw, 34px) clamp(10px, 2.8vw, 32px);
+    background-color: var(--color-white);
+    box-shadow: var(--shadow-primary);
+    border-radius: var(--radius-m);
+
+    label {
+      display: block;
+
+      &:not(.request__textarea) {
+        margin-bottom: 16px;
+      }
+
+      &.request__textarea {
+        margin-bottom: 24px;
+      }
+    }
+
+    input,
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 14px clamp(8px, 1.2vw, 16px);
+      background-color: var(--color-grey-200);
+      border-radius: var(--radius-m);
+    }
+
+    textarea {
+      min-height: 156px;
+      resize: none;
+      border: none;
+    }
+  }
+
+  @include media(mobile-l) {
+    .btn {
+      width: 100%;
+    }
+  }
+}
