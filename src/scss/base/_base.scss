@@ -12,24 +12,12 @@ body {
   font-family: var(--font-family-primary);
   font-weight: var(--fw-400);
   font-style: normal;
-  font-size: clamp(18px, 2vi, 20px);
-  line-height: 1.5;
+  font-size: clamp(20px, 2vi, 23px);
+  line-height: 1.2;
   letter-spacing: 0;
-  color: var(--color-blue-900);
+  color: var(--color-grey-900);
   background-color: var(--color-white);
   font-optical-sizing: auto;
-
-  &--rental {
-    .section--featured {
-      :nth-last-child(2) {
-        margin-bottom: 0;
-      }
-
-      .btn {
-        display: none;
-      }
-    }
-  }
 
   &__body {
     min-width: 320px;
@@ -47,12 +35,8 @@ body {
   width: 100%;
   max-width: var(--container-width);
 
-  &--large {
-    max-width: var(--container-large);
-
-    @include media(tablet) {
-      max-width: var(--container-width);
-    }
+  &--wide {
+    max-width: var(--container-wide);
   }
 }
 
@@ -64,9 +48,7 @@ body {
 }
 
 .main {
-  &--no-hero {
-    padding-top: var(--header-height);
-  }
+  padding-top: var(--header-height);
 }
 
 .overlay {

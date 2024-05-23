@@ -1,0 +1,82 @@
+<header class="header">
+  <div class="container container--wide">
+    <nav class="nav">
+      <div class="nav__top">
+        <a class="logo" href="index.html">
+          <img class="logo__img" src="./images/logo.svg" alt="Patagonia Luxury Adventures logo" width="135" height="52">
+        </a>
+
+        <div class="nav__btns">
+          <a class="nav__link" href="sign-up.html">
+            Sign Up
+          </a>
+
+          <button class="btn request-btn" type="button" formsappId="660a7d1cdfce99d5b5bdf541">
+            Booking
+          </button>
+        </div>
+      </div>
+
+      <button class="burger" aria-label="Mobile menu" type="button"><span></span></button>
+
+      <div class="nav__inner">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'home' }}" href="index.html">
+              Home
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'tours' }}" href="tours.html">
+              Tours
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'destinations' }}" href="destinations.html">
+              Destinations
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link {{ page === 'guide' }}" href="guide.html">
+              Guide
+            </a>
+          </li>
+        </ul>
+
+        <div class="nav__btns">
+          <a class="nav__link" href="sign-up.html">
+            Sign Up
+          </a>
+
+          <button class="btn request-btn" type="button" formsappId="664339b5544f758068cf14f0">
+            Booking
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<script>
+  const startHeightValue = () => {
+    let vh = window.innerHeight * 1;
+    document.querySelector(':root').style.setProperty('--vh', `${vh}px`);
+
+    const pageHeader = document.querySelector('.header');
+
+    const headerHeight = pageHeader ? pageHeader.offsetHeight : 0;
+
+    document.documentElement.style.setProperty(
+      '--header-height',
+      `${headerHeight}px`,
+    );
+  };
+
+  window.addEventListener('resize', startHeightValue);
+  window.addEventListener('scroll', startHeightValue);
+
+  startHeightValue();
+</script>

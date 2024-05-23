@@ -4,8 +4,10 @@
 
 :root {
   --content-width: 1240px;
+  --content-wide: 1360px;
   --container-offset: 16px;
   --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-wide: calc(var(--content-wide) + (var(--container-offset) * 2));
 
   // font-family
   --font-family-primary: "Inter", sans-serif;
