@@ -1,0 +1,40 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  padding: clamp(20px, 6.2vw, 87px) 0;
+
+  .container {
+    max-width: 1280px;
+    padding-inline: 0;
+  }
+
+  &__wrapper {
+    @include flex-all-sb;
+    gap: 20px;
+  }
+
+  &__items {
+    @include flex-sb;
+    gap: clamp(20px, 4.2vw, 60px);
+
+    a {
+      padding: 0 4px;
+      font-size: 16px;
+      line-height: 1.21;
+    }
+  }
+
+  @include media(desktop) {
+    .container {
+      padding: 0 var(--container-offset);
+      max-width: var(--container-width);
+    }
+  }
+
+  @include media(tablet) {
+    &__wrapper {
+      flex-direction: column-reverse;
+    }
+  }
+}

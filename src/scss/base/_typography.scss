@@ -85,7 +85,7 @@ textarea {
 
 .copyright {
   font-weight: var(--fw-300);
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   line-height: 1.2;
   color: var(--color-dark);
 
@@ -95,6 +95,7 @@ textarea {
 
   @include media(mobile-m) {
     line-height: 1.6;
+    text-align: center;
 
     br {
       display: block;
