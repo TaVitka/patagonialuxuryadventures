@@ -26,9 +26,18 @@ h3 {
   line-height: 1.2;
 }
 
+.title,
 .desc {
-  font: var(--fw-300);
-  font-size: clamp(22px, 2.6vi, 28px);
+  font-size: clamp(20px, 2.6vi, 28px);
+}
+
+.title {
+  font-weight: var(--fw-500);
+  color: var(--color-black);
+}
+
+.desc {
+  font-weight: var(--fw-300);
   line-height: 1.16;
   color: var(--color-white);
 }
@@ -38,8 +47,15 @@ h3 {
 }
 
 .decor {
-  color: var(--color-blue-500);
   line-height: 1.2;
+  color: var(--color-blue-500);
+
+  &--large {
+    font: var(--fw-500);
+    font-size: clamp(20px, 2.6vi, 28px);
+    line-height: 1.1;
+    color: var(--color-blue-400);
+  }
 }
 
 a,
