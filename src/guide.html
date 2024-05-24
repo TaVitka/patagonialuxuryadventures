@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" class="page">
+<include src="./html/_head.html" locals='{"title": "Guide"}'></include>
+
+<body class="page__body">
+<div class="site-container">
+  <include src="./html/_header.html" locals='{"page": "guide"}'></include>
+
+  <main class="main">
+    <include src="./html/guide/_hero.html"></include>
+
+    <div class="container">
+      <section class="section section--small article tabs">
+        <h2 class="sr-only">
+          Travel Guide Articles
+        </h2>
+
+        <include src="./html/guide/_nav.html"></include>
+
+        <div class="tabs__pane article__pane">
+          <div data-id="visa">
+            <include src="./html/guide/_visa.html"></include>
+          </div>
+          <div data-id="currency">
+            <include src="./html/guide/_currency.html"></include>
+          </div>
+          <div data-id="weather">
+            <include src="./html/guide/_weather.html"></include>
+          </div>
+          <div data-id="local">
+            <include src="./html/guide/_local.html"></include>
+          </div>
+          <div data-id="health">
+            <include src="./html/guide/_health.html"></include>
+          </div>
+          <div data-id="transportation">
+            <include src="./html/guide/_transportation.html"></include>
+          </div>
+          <div data-id="packing">
+            <include src="./html/guide/_packing.html"></include>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <include src="./html/home/_request.html"></include>
+  </main>
+
+  <include src="./html/_footer.html"></include>
+</div>
+</body>
+</html>
