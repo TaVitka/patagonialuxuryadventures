@@ -21,7 +21,8 @@
   transition-timing-function: ease-in-out;
 
   &:hover,
-  &--reverse {
+  &--reverse,
+  &.selected {
     color: var(--color-white) !important;
     background: var(--color-grey-700);
   }
