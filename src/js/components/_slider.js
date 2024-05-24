@@ -17,6 +17,23 @@ const swiperAbout = new Swiper('.slider__about', {
   },
 });
 
+const swiperTours = new Swiper('.slider__tours', {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  speed: 1400,
+  autoplay: {
+    delay: 6000,
+  },
+  centeredSlides: true,
+  modules: [Navigation, Scrollbar, Autoplay],
+  draggable: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.slider__btn--next',
+    prevEl: '.slider__btn--prev',
+  },
+});
+
 const swiperDiscoverMini = new Swiper(".slider__discover--thumb", {
   spaceBetween: 0,
   freeMode: true,

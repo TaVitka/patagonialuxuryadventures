@@ -51,7 +51,7 @@ h3 {
   color: var(--color-blue-500);
 
   &--large {
-    font: var(--fw-500);
+    font-weight: var(--fw-500);
     font-size: clamp(20px, 2.6vi, 28px);
     line-height: 1.1;
     color: var(--color-blue-400);
