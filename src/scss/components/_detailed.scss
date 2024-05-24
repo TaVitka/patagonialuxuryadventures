@@ -1,0 +1,122 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.detailed {
+  h2 {
+    margin-bottom: clamp(20px, 2.8vw, 40px);
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    gap: clamp(20px, 2.8vw, 40px) 0;
+
+    &:not(:last-of-type) {
+      margin-bottom: clamp(20px, 2.8vw, 40px);
+    }
+  }
+
+  &__item {
+    width: 100%;
+    padding: clamp(0px, 2vw, 28px) clamp(0px, 2vw, 20px);
+
+    &--mountains {
+      max-width: 833px;
+    }
+
+    &--coastal {
+      max-width: 407px;
+    }
+
+    &--wild {
+      max-width: 514px;
+    }
+    &--island {
+      max-width: 726px;
+    }
+  }
+
+  &__top {
+    position: relative;
+
+    img {
+      height: revert-layer;
+      width: 100%;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    bottom: 12px;
+    padding: 8px 20px;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.16;
+    font-weight: var(--fw-300);
+    color: var(--color-dark);
+    background-color: var(--color-grey-400);
+    border-top-right-radius: var(--radius-l);
+    border-bottom-right-radius: var(--radius-l);
+  }
+
+  &__links {
+    background-color: var(--color-blue-300);
+  }
+
+  &__link {
+    position: relative;
+    @include flex-all-sb;
+    padding-block: 10.5px;
+    padding-inline: clamp(8px, 2vw, 20px) clamp(8px, 2.2vw, 24px);
+    border-bottom: 1px solid var(--color-grey-400);
+
+    h3 {
+      font-size: 18px;
+      font-weight: var(--fw-500);
+      white-space: nowrap;
+    }
+
+    a {
+      font-size: 16px;
+      line-height: 1.21;
+      font-weight: 300;
+      white-space: nowrap;
+    }
+  }
+
+  @include media(tablet) {
+    &__list {
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      &[class] {
+        max-width: 100%;
+      }
+    }
+
+    &__top {
+      img {
+        height: auto;
+        aspect-ratio: 2/1;
+      }
+    }
+
+    &__link {
+      flex-direction: column;
+      gap: 10px;
+
+      h3,
+      a {
+        white-space: initial;
+        text-align: center;
+      }
+
+      a::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+      }
+    }
+  }
+}

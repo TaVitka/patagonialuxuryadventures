@@ -30,6 +30,15 @@
     }
   }
 
+  &--reverse {
+    .hero__content {
+      h1,
+      .desc {
+        color: var(--color-dark);
+      }
+    }
+  }
+
   &--tours {
     .hero__content {
       .desc {
@@ -38,9 +47,37 @@
     }
   }
 
+  &--destinations {
+    .hero__inner {
+      padding-top: calc(var(--header-height) - 45px);
+    }
+
+    .hero__content {
+      .desc {
+        margin-bottom: clamp(32px, 12vw, 60px);
+      }
+    }
+  }
+
   @include media(tablet) {
     &__inner {
       min-height: 460px;
+    }
+
+    &--reverse {
+      .hero__content {
+        h1,
+        .desc {
+          color: var(--color-white);
+        }
+      }
+    }
+
+    &--destinations {
+      .hero__inner {
+        padding-top: calc(var(--header-height) - 10px);
+        background-position: center;
+      }
     }
   }
 }

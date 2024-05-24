@@ -42,11 +42,12 @@
   //  radius
   --radius-main: 0.5px;
   --radius-m: 8px;
+  --radius-l: 16px;
   --radius-full: 50%;
 
   // shadow
   --shadow-primary: 0px 4px 40px 0px #2B59FF14;
 
   // gradient
-  --gradient-main: linear-gradient(320deg, rgba(12, 57, 71, 0.4) 40%, rgba(0, 0, 0, 0.5) 80%);
+  --gradient-main: linear-gradient(320deg, rgba(12, 57, 71, 0.4) 40%, rgba(0, 0, 0, 0.6) 80%);
 }

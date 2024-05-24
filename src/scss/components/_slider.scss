@@ -43,6 +43,10 @@
   &__texts {
     p {
       color: var(--color-grey-870);
+
+      &:not(:last-of-type) {
+        margin-bottom: 16px;
+      }
     }
   }
 
@@ -198,6 +202,20 @@
       &--prev {
         left: 20px;
         transform:  translateY(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  &--overview {
+    h2 {
+      margin-bottom: clamp(20px, 2.3vw, 32px);
+    }
+
+    .slider__content {
+      max-width: 440px;
+
+      .desc {
+        color: var(--color-dark)
       }
     }
   }

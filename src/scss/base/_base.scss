@@ -19,6 +19,18 @@ body {
   background-color: var(--color-white);
   font-optical-sizing: auto;
 
+  &--destinations {
+    section#featured {
+      .box__nav {
+        justify-content: center;
+      }
+
+      .btn {
+        display: none;
+      }
+    }
+  }
+
   &__body {
     min-width: 320px;
     min-height: var(--vh);
