@@ -20,6 +20,19 @@ h2,
   line-height: 1;
 }
 
+h2 {
+  span {
+    padding-left: clamp(0px, 1.8vw, 29px);
+    color: var(--color-blue-600);
+
+    @include media(tablet) {
+      display: block;
+      padding-left: 0;
+      padding-top: 6px;
+    }
+  }
+}
+
 h3 {
   font-size: clamp(18px, 2vi, 23px);
   font-weight: var(--fw-400);

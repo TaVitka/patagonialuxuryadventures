@@ -164,6 +164,22 @@
     }
   }
 
+  &--single {
+    .box__grid {
+      gap: clamp(20px, 7vw, 96px);
+      max-width: 816px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .box__item {
+      padding: 28px 0;
+    }
+
+    .box__content {
+      padding-block: 26px;
+    }
+  }
+
   @include media(tablet-wide) {
     &--slider {
       .box__wrapper {

@@ -1,0 +1,111 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.single {
+  padding: 32px 0;
+
+  &__back {
+    @include cover-background;
+
+    display: block;
+    width: 24px;
+    height: 24px;
+    background-image: url("../images/icons/back-icon.svg");
+    filter: none;
+    transition: filter 0.4s ease-in-out;
+
+    &:hover {
+      filter: brightness(0) saturate(100%) invert(47%) sepia(100%) saturate(362%) hue-rotate(148deg) brightness(86%) contrast(92%);
+    }
+  }
+
+  &__back,
+  &__image,
+  &__body {
+    margin-bottom: clamp(24px, 3.8vw, 50px);
+  }
+
+  &__title,
+  &__content {
+    padding: 12px clamp(6px, 1.6vw, 20px);
+  }
+
+  &__title,
+  &__name,
+  &__desc {
+    font-size: clamp(20px, 2.6vi, 28px);
+    line-height: 1.16;
+  }
+
+  &__title,
+  &__name {
+    font-weight: var(--fw-500);
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    background-color: var(--color-grey-900);
+  }
+
+  &__content {
+    display: flex;
+    gap: 10px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__body {
+    max-width: 800px;
+    width: 100%;
+  }
+
+  &__name {
+    max-width: 200px;
+    width: 100%;
+    color: var(--color-dark);
+  }
+
+  &__desc,
+  &__accent,
+  &__detail p {
+    font-weight: var(--fw-300);
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__accent,
+  &__detail {
+    padding: 0 8px;
+  }
+
+  &__accent {
+    background-color: var(--color-blue-300);
+  }
+
+  @include media(mobile-m) {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__image {
+      img {
+        aspect-ratio: 4/3;
+      }
+    }
+
+    &__accent,
+    &__detail,
+    &__content {
+      padding: 0;
+    }
+
+    .btn {
+      width: 100%;
+    }
+  }
+}
