@@ -73,6 +73,7 @@
       font-size: 18px;
       font-weight: var(--fw-500);
       white-space: nowrap;
+      transition: color 0.4s ease-in-out;
     }
 
     a {
@@ -80,6 +81,27 @@
       line-height: 1.21;
       font-weight: 300;
       white-space: nowrap;
+      transition: color 0.4s ease-in-out;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+      }
+    }
+
+    &:hover {
+      h3, a {
+        color: var(--color-blue-600);
+      }
+    }
+  }
+
+  &--single {
+    .detailed__item {
+      max-width: 793px;
+      padding: 0;
     }
   }
 
@@ -109,13 +131,6 @@
       a {
         white-space: initial;
         text-align: center;
-      }
-
-      a::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        z-index: 2;
       }
     }
   }

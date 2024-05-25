@@ -18,16 +18,12 @@ h2,
   font-size: clamp(26px, 2.8vi, 40px);
   font-weight: var(--fw-300);
   line-height: 1;
-}
 
-h2 {
   span {
-    padding-left: clamp(0px, 1.8vw, 29px);
     color: var(--color-blue-600);
 
     @include media(tablet) {
       display: block;
-      padding-left: 0;
       padding-top: 6px;
     }
   }

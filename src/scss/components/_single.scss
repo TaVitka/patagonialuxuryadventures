@@ -5,18 +5,48 @@
   padding: 32px 0;
 
   &__back {
-    @include cover-background;
-
+    position: relative;
     display: block;
-    width: 24px;
-    height: 24px;
-    background-image: url("../images/icons/back-icon.svg");
-    filter: none;
-    transition: filter 0.4s ease-in-out;
+    padding-left: 32px;
+    min-height: 24px;
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: var(--fw-300);
 
-    &:hover {
+    &::before {
+      @include cover-background;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+      background-image: url("../images/icons/back-icon.svg");
+      filter: none;
+      transition: filter 0.4s ease-in-out;
+    }
+
+    &:hover::before  {
       filter: brightness(0) saturate(100%) invert(47%) sepia(100%) saturate(362%) hue-rotate(148deg) brightness(86%) contrast(92%);
     }
+
+    & + .accent {
+      margin-bottom: clamp(20px, 2.8vw, 40px);
+    }
+  }
+
+  &__intro {
+    margin-bottom:  clamp(20px, 7vw, 96px);
+    font-weight: var(--fw-300);
+  }
+
+  &__intro,
+  &__title,
+  &__name,
+  &__desc {
+    font-size: clamp(20px, 2.6vi, 28px);
+    line-height: 1.16;
   }
 
   &__back,
@@ -28,13 +58,6 @@
   &__title,
   &__content {
     padding: 12px clamp(6px, 1.6vw, 20px);
-  }
-
-  &__title,
-  &__name,
-  &__desc {
-    font-size: clamp(20px, 2.6vi, 28px);
-    line-height: 1.16;
   }
 
   &__title,
