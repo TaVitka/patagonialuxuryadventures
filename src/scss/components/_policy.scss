@@ -58,6 +58,7 @@
     color: var(--color-blue-600);
     text-decoration: underline;
     text-underline-offset: 6px;
+    word-break: break-all;
 
     &:hover {
       color: var(--color-pink-400);
